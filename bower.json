@@ -1,0 +1,12 @@
+{
+  "name": "ld37",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "https://davidjokinen.com/LD37",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "pixi.js": "^4.1.1"
+  }
+}

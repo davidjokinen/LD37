@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Mail Room : LD37</title>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/pixi.js/dist/pixi.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+		<script src="min/game.js"></script>
+		<style>
+			html, body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				font-family: 'Comfortaa', cursive;
+				margin: 0px;
+				  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+			}
+			div{
+				position: absolute;
+				z-index: 100;
+			}
+			.menu{
+				background: #f4967c;
+				color: white;
+				//min-height: 50px;
+				min-width: 100px;
+				padding: 3px;
+				opacity: 0.9;
+
+				border-bottom: 2px solid #000;
+			}
+			#mainMenu{
+				height: 50px;
+				width: 200px;
+				
+				
+			}
+			#selectMenu {
+				height: 50px;
+				width: 120px;
+			
+				right: 0px;
+			}
+			#dataMenu {
+				right: 50%;
+				width: 250px;
+				height: 20px;
+				
+				margin-right:-100px;
+				text-align: center;
+			}
+			#activeMode{
+
+			}
+			#buildMenu{
+				width: 80px;
+				height: 140px;
+				top: 80px;
+			}
+			.selected{
+				background: gray;
+			}
+			#buildMenu button{
+				width: 99px;
+			}
+			.hide {
+				display: none;
+			}
+		</style>
+	</head>
+	<body oncontextmenu="return false;">
+		<div class='menu' id='mainMenu'>
+			<div  id='activeMode'>Menu actions: Select</div>
+			<div style="padding-top:22px">
+				<button type="button" onclick='changeMode(0);'>Select</button>
+				<button type="button" onclick='changeMode(1);'>Build</button>
+				<button type="button" onclick='changeMode(2);'>Clear</button>
+			</div>
+		</div>
+		<div class='menu hide' id='buildMenu'>
+			<div  id='activeMode'>Build Items:</div>
+			<div style="padding-top:22px">
+				<button id="build0" class="selected" type="button" onclick='buildMode(0);'>Floor Mover</button>
+				<button id="build1" type="button" onclick='buildMode(1);'>Lime Sorter </button>
+				<button id="build2" type="button" onclick='buildMode(2);'>Yellow Sorter </button>
+				<button id="build3" type="button" onclick='buildMode(3);'>Blue Sorter </button>
+				<button id="build4" type="button" onclick='buildMode(4);'>Pink Sorter </button>
+			<!--<button type="button" onclick='buildMode(2);'>Shacker</button>-->
+			</div>
+
+		</div>
+		<div class='menu' id='dataMenu'>
+			Mail: 0 Money: $0
+		</div>
+		<div class='menu' id='selectMenu'>
+			Selected:
+		</div>
+	</body>
+</html> 
